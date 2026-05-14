@@ -1,0 +1,5 @@
+1. page with exercises I am going to be doing and tracking. on the page you can see existing exercises 
+you are doing and also option to add new
+
+when clicking on specific exerice you get a modal where you can add new attempts and view existing ones
+you can also see a graph.
