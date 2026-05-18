@@ -12,8 +12,25 @@ datasource db {
   provider = "postgresql"
 }
 
+enum WeightUnit {
+  lbs
+  kg
+}
+
 model User {
-  id    String @id @default(cuid())
-  email String @unique
-  name  String
+  id      String   @id @default(cuid())
+  email   String   @unique
+  name    String
+  records Record[]
+}
+
+model Record {
+  id           String     @id @default(cuid())
+  createdAt    DateTime   @default(now())
+  exerciseName String
+  reps         Int
+  weight       Int
+  unit         WeightUnit
+  userId       String
+  user         User       @relation(fields: [userId], references: [id], onDelete: Cascade)
 }

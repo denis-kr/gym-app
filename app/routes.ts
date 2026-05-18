@@ -10,6 +10,7 @@ export default [
     index("./routes/home.tsx"),
     route("dashboard", "./routes/dashboard.tsx"),
     route("exercises", "./routes/exercises.tsx"),
+    route("exercise", "./routes/exercise.tsx"),
     route("login", "./routes/login.tsx"),
   ]),
   route("*", "./routes/not-found.tsx"),
